@@ -5,14 +5,10 @@ from utils import *
 
 try:
     opts = Options()
-    opts.set_headless()
-    assert opts.headless
-    browser = Firefox()
-    start = time.time()
+    opts.headless = True
+    browser = Firefox(options=opts)
     print('Starting the program. Please wait...\n')
     browser.get('https://news.google.com/')
-    end = time.time()
-    print(f'Total time to load the page: {round(end - start,5)} seconds.\n')
 
     weather = get_weather(browser)
     time.sleep(2)
@@ -24,11 +20,8 @@ try:
     print()
     if not int(choice) == 4:
         parse_sending_options(int(choice), news, weather)
-
-    time.sleep(2)
-
     browser.close()
+    time.sleep(2)
 except Exception as error:
-    time.sleep(5)
     print("Due to some technical error. The program is exiting...")
     browser.close()
