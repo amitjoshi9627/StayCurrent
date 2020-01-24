@@ -1,13 +1,13 @@
 # StayCurrent
 StayCurrent is a python program which scrapes latest news headlines and your local weather and can also deliver it right it into your mail inbox.
 
-**To start the program just run `python staycurrent.py`.
+**To start the program just run `python staycurrent.py`**.
 
 ## Before you send an email
 
 If you try to run the script with your credentials, you’ll probably get an error like this one.
 
-**smtplib.SMTPAuthenticationError: Please log in via your web browser and then try again. Learn more at https://support.google.com/mail/answer/78754**
+**smtplib.SMTPAuthenticationError: Please log in via your web browser and then try again. Learn more [here](https://support.google.com/mail/answer/78754)**
 
 So what does this error mean?
 
